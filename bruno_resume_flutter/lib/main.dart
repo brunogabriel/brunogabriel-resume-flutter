@@ -1,6 +1,6 @@
 import 'package:bruno_resume_flutter/core/routes.dart';
+import 'package:bruno_resume_flutter/presentation/page/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
 
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         return Routes.fadeThrough(settings, (context) {
           switch (settings.name) {
             case Routes.home:
-              return const SizedBox.shrink();
+              return const HomePage();
             default:
               return const SizedBox.shrink();
           }
