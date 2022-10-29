@@ -9,6 +9,7 @@ abstract class ResumeService {
 @Injectable(as: ResumeService)
 class ResumeServiceImpl implements ResumeService {
   @override
-  Future<dynamic> getResponse() =>
-      rootBundle.loadString('resume.json').then((value) => jsonDecode(value));
+  Future<dynamic> getResponse() => rootBundle
+      .loadString('assets/resume.json')
+      .then((value) => jsonDecode(value));
 }
