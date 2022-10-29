@@ -21,6 +21,9 @@ jobs:
       - name: Open folder
         run: cd bruno_resume_flutter
 
+      - name: Display files
+        run: ls -all
+
       - name: Install dependencies
         run: flutter pub get
 
