@@ -18,19 +18,16 @@ jobs:
         with:
           channel: "stable"
 
-      - name: Open folder
-        run: cd bruno_resume_flutter
-
-      - name: Display files
-        run: ls -all
-
       - name: Install dependencies
         run: flutter pub get
+        working-directory: bruno_resume_flutter
 
       - name: Build Web
         run: flutter build web --release
+        working-directory: bruno_resume_flutter
 
       - name: Deploy
+        working-directory: bruno_resume_flutter
         run: |
           cd build/web
           git init
