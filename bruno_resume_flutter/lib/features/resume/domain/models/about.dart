@@ -1,3 +1,4 @@
+import 'package:bruno_resume_flutter/features/resume/domain/models/resume_action.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:json_annotation/json_annotation.dart';

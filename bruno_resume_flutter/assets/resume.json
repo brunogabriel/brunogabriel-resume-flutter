@@ -11,6 +11,23 @@
       "Swift/Object-c (Long time ago)"
     ]
   },
+  "actions": [
+    {
+      "title": "E-mail",
+      "icon": "envelope",
+      "link": "mailto://bruno.gsantos89@gmail.com"
+    },
+    {
+      "title": "Linkedid",
+      "icon": "linkedin",
+      "link": "https://www.linkedin.com/in/brunogabrieldossantos"
+    },
+    {
+      "title": "Medium",
+      "icon": "medium",
+      "link": "https://medium.com/@brunogabrieldossantos"
+    }
+  ],
   "educations": [
     {
       "name": "Universidade Federal de São Paulo (UNFESP)",

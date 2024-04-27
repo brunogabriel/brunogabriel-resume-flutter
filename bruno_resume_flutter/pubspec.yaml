@@ -17,6 +17,7 @@ dependencies:
   equatable: ^2.0.5
   url_launcher: ^6.2.4
   json_annotation: ^4.9.0
+  font_awesome_flutter: ^10.7.0
   
 dev_dependencies:
   flutter_test:

@@ -2,6 +2,7 @@ import 'package:bruno_resume_flutter/features/resume/domain/models/about.dart';
 import 'package:bruno_resume_flutter/features/resume/domain/models/education.dart';
 import 'package:bruno_resume_flutter/features/resume/domain/models/experience.dart';
 import 'package:bruno_resume_flutter/features/resume/domain/models/publication.dart';
+import 'package:bruno_resume_flutter/features/resume/domain/models/resume_action.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -19,6 +20,7 @@ class Resume extends Equatable {
     required this.experiences,
     required this.publications,
     required this.extraData,
+    required this.actions,
   });
 
   final About about;
@@ -26,6 +28,7 @@ class Resume extends Equatable {
   final List<Experience> experiences;
   final List<Publication> publications;
   final List<String> extraData;
+  final List<ResumeAction> actions;
 
   Map<String, dynamic> toJson() => _$ResumeToJson(this);
 
@@ -36,5 +39,6 @@ class Resume extends Equatable {
         experiences,
         publications,
         extraData,
+        actions,
       ];
 }

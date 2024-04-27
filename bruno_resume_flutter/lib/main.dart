@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: AppTheme.day.dayTheme.themeData,
       debugShowCheckedModeBanner: false,
-      home: const ResumePage(),
+      home: const SelectionArea(child: ResumePage()),
     );
   }
 }

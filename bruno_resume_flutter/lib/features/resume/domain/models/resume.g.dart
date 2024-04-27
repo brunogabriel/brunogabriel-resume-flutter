@@ -19,6 +19,9 @@ Resume _$ResumeFromJson(Map<String, dynamic> json) => Resume(
           .toList(),
       extraData:
           (json['extraData'] as List<dynamic>).map((e) => e as String).toList(),
+      actions: (json['actions'] as List<dynamic>)
+          .map((e) => ResumeAction.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$ResumeToJson(Resume instance) => <String, dynamic>{
@@ -27,4 +30,5 @@ Map<String, dynamic> _$ResumeToJson(Resume instance) => <String, dynamic>{
       'experiences': instance.experiences,
       'publications': instance.publications,
       'extraData': instance.extraData,
+      'actions': instance.actions,
     };
