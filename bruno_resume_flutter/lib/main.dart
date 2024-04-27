@@ -1,15 +1,30 @@
-import 'package:bruno_resume_flutter/core/routes.dart';
-import 'package:bruno_resume_flutter/presentation/page/home_page.dart';
+import 'package:bruno_resume_flutter/features/change_theme/presentation/cubit/change_theme_cubit.dart';
+import 'package:bruno_resume_flutter/features/resume/presentation/page/resume_page.dart';
+import 'package:bruno_resume_flutter/shared/theme/extensions/bool_extensions.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_framework/responsive_wrapper.dart';
-import 'package:responsive_framework/utils/scroll_behavior.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import 'injection.dart';
+import 'di/injection.dart';
 
 void main() async {
+  GoogleFonts.config.allowRuntimeFetching = false;
   WidgetsFlutterBinding.ensureInitialized();
   await configureDependencies();
-  runApp(const MyApp());
+  runApp(const Application());
+}
+
+class Application extends StatelessWidget {
+  const Application({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider<ChangeThemeCubit>(
+      create: (_) => GetIt.I.get<ChangeThemeCubit>()..start(),
+      child: const MyApp(),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -17,33 +32,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      builder: (context, child) => ResponsiveWrapper.builder(
-          BouncingScrollWrapper.builder(
-              context, child ?? const SizedBox.shrink()),
-          maxWidth: 1200,
-          minWidth: 450,
-          defaultScale: true,
-          breakpoints: [
-            const ResponsiveBreakpoint.resize(450, name: MOBILE),
-            const ResponsiveBreakpoint.autoScale(800, name: TABLET),
-            const ResponsiveBreakpoint.autoScale(1000, name: TABLET),
-            const ResponsiveBreakpoint.resize(1200, name: DESKTOP),
-            const ResponsiveBreakpoint.autoScale(2460, name: "4K"),
-          ],
-          background: Container(color: const Color(0xFFF5F5F5))),
-      initialRoute: Routes.home,
-      onGenerateRoute: (RouteSettings settings) {
-        return Routes.fadeThrough(settings, (context) {
-          switch (settings.name) {
-            case Routes.home:
-              return const HomePage();
-            default:
-              return const SizedBox.shrink();
-          }
-        });
+    return BlocBuilder<ChangeThemeCubit, bool>(
+      builder: (context, state) {
+        return MaterialApp(
+          title: 'Flutter Demo',
+          theme: state.themeData,
+          debugShowCheckedModeBanner: false,
+          home: const SelectionArea(child: ResumePage()),
+        );
       },
-      debugShowCheckedModeBanner: false,
     );
   }
 }
