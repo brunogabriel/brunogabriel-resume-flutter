@@ -1,5 +1,5 @@
 abstract class FutureUseCase<T, Params> {
-  Future<T> execute(Params? params);
+  Future<T> execute(Params params);
 }
 
 abstract class FutureBaseUseCase<T> {
