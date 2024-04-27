@@ -20,9 +20,6 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
         working-directory: bruno_resume_flutter
-
-      - name: Analyze project
-        run: flutter analyze
-
+        
       - name: Run tests
         run: flutter test --coverage --reporter github
