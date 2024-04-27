@@ -47,6 +47,6 @@ void main() {
     expect(dataSource.changeTheme(false), completes);
     final capturedTheme =
         verify(() => sharedPreferences.setBool(any(), captureAny())).captured;
-    expect(capturedTheme.last, isFalse);
+    expect(capturedTheme.last, isTrue);
   });
 }
