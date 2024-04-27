@@ -5,10 +5,11 @@ import '../domain/data/resume_repository.dart';
 
 @Injectable(as: ResumeRepository)
 class ResumeRepositoryImpl implements ResumeRepository {
-  ResumeRepositoryImpl({required this.dataSource});
+  ResumeRepositoryImpl({required ResumeDataSource dataSource})
+      : _dataSource = dataSource;
 
-  final ResumeDataSource dataSource;
+  final ResumeDataSource _dataSource;
 
   @override
-  Future<dynamic> getResume() => dataSource.getResumeData();
+  Future<dynamic> getResume() => _dataSource.getResumeData();
 }

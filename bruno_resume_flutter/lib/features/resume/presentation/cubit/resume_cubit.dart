@@ -9,14 +9,14 @@ part 'resume_state.dart';
 
 @injectable
 class ResumeCubit extends Cubit<ResumeState> {
-  ResumeCubit(this.resumeUseCase) : super(ResumeLoadingState());
+  ResumeCubit(this._resumeUseCase) : super(ResumeLoadingState());
 
-  final ResumeUseCase resumeUseCase;
+  final ResumeUseCase _resumeUseCase;
 
   void loadResume() async {
     emit(ResumeLoadingState());
     try {
-      final result = await resumeUseCase.execute();
+      final result = await _resumeUseCase.execute();
       emit(ResumeResultState(result: result));
     } catch (_) {
       emit(ResumeErrorState());

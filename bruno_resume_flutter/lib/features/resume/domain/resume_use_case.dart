@@ -10,12 +10,13 @@ abstract class ResumeUseCase extends FutureBaseUseCase<Resume> {
 
 @Injectable(as: ResumeUseCase)
 class ResumeUseCaseImpl extends ResumeUseCase {
-  ResumeUseCaseImpl({required this.resumeRepository});
+  ResumeUseCaseImpl({required ResumeRepository resumeRepository})
+      : _resumeRepository = resumeRepository;
 
-  final ResumeRepository resumeRepository;
+  final ResumeRepository _resumeRepository;
 
   @override
-  Future<Resume> execute() async => resumeRepository
+  Future<Resume> execute() async => _resumeRepository
       .getResume()
       .then((value) => Resume.fromJson(value))
       .onError((error, stackTrace) => throw Exception("Can't load resume"));

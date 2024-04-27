@@ -1,4 +1,5 @@
 import 'package:bruno_resume_flutter/features/resume/domain/models/about.dart';
+import 'package:bruno_resume_flutter/shared/theme/theme_constants.dart';
 import 'package:flutter/material.dart';
 
 class AboutWidget extends StatelessWidget {
@@ -19,7 +20,7 @@ class AboutWidget extends StatelessWidget {
           about.technologies.length,
           (index) => Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 16,
+              horizontal: kDefaultSpace,
             ),
             child: Text(
               '• ${about.technologies[index]}',

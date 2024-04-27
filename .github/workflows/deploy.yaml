@@ -24,7 +24,7 @@ jobs:
         working-directory: bruno_resume_flutter
 
       - name: Build Web
-        run: flutter build web --release
+        run: flutter build web --web-renderer canvaskit --release 
         working-directory: bruno_resume_flutter
 
       - name: Deploy
