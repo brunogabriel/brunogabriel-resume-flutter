@@ -31,6 +31,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - google_fonts/
-    - resume.json
+    - assets/google_fonts/
+    - assets/resume.json
    
