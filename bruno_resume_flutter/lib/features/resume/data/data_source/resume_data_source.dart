@@ -8,13 +8,13 @@ abstract class ResumeDataSource {
 
 class LocalResumeDataSource extends ResumeDataSource {
   LocalResumeDataSource({
-    required this.assetBundle,
-  });
+    required AssetBundle assetBundle,
+  }) : _assetBundle = assetBundle;
 
-  final AssetBundle assetBundle;
+  final AssetBundle _assetBundle;
 
   @override
-  Future getResumeData() => assetBundle
+  Future getResumeData() => _assetBundle
       .loadString('assets/resume.json')
       .then((value) => jsonDecode(value));
 }

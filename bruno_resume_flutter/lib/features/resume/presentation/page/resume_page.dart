@@ -23,11 +23,6 @@ class ResumePage extends StatelessWidget {
           return FadeInView(
             child: Scaffold(
               appBar: AppBar(
-                title: Text(
-                  (state is ResumeResultState)
-                      ? state.result.about.fullname
-                      : '',
-                ),
                 actions: [
                   if (state is ResumeResultState) ...{
                     ...state.result.actions.map(
