@@ -31,7 +31,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/google_fonts/
-    - assets/resume.json
-  #   - assets/fonts/Poppins-Bold.ttf
+    - google_fonts/
+    - resume.json
    

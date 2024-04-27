@@ -5,7 +5,8 @@ class ResumeErrorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: bruno
-    return Text('TODO: error');
+    return const Center(
+      child: Text('Oops, something wrong happned'),
+    );
   }
 }

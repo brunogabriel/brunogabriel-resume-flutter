@@ -1,22 +1,18 @@
 import 'package:flutter/material.dart';
 
-// TODO: move to resume page
-class FadeInAction extends StatefulWidget {
-  const FadeInAction({
+class FadeInView extends StatefulWidget {
+  const FadeInView({
     Key? key,
-    required this.icon,
-    this.onPressed,
+    required this.child,
   }) : super(key: key);
 
-  final Widget icon;
-  final VoidCallback? onPressed;
+  final Widget child;
 
   @override
-  State<FadeInAction> createState() => _FadeInActionState();
+  State<FadeInView> createState() => _FadeInViewState();
 }
 
-class _FadeInActionState extends State<FadeInAction>
-    with TickerProviderStateMixin {
+class _FadeInViewState extends State<FadeInView> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 1),
     vsync: this,
@@ -45,10 +41,7 @@ class _FadeInActionState extends State<FadeInAction>
   Widget build(BuildContext context) {
     return FadeTransition(
       opacity: _animation,
-      child: IconButton(
-        icon: widget.icon,
-        onPressed: widget.onPressed,
-      ),
+      child: widget.child,
     );
   }
 }

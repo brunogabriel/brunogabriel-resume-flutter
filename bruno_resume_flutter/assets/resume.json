@@ -45,8 +45,13 @@
       "name": "XP Inc",
       "period": "09/2022 - current",
       "position": "Staff Software Engineer",
-      "description": "Development, maintenance and contribute with engineers at company to delivery high quality software by using the best architectures, practices and community/enterprise tools.",
-      "highlights": []
+      "description": "Specializes in development, maintenance, and collaboration with engineers across multiple squads to deliver high-quality software. Adept at utilizing best architecture practices and leveraging community/enterprise tools to achieve exceptional results.",
+      "highlights": [
+        "Actively contributed to defining and implementing architectural changes in Flutter at their company, ensuring optimal performance and scalability",
+        "Provided valuable support and guidance to Mobile engineers, enabling their Flutter journey by creating comprehensive Learning Paths from scratch. These paths cover essential and advanced topics, culminating in the creation of a fully functional application that embodies best practices",
+        "Developed a strategic approach to integrating .NET and maintaining the company's standards in specific squads",
+        "Technical leadership by supporting both mobile and backend development, guiding teams, and fostering collaboration to achieve outstanding outcomes"
+      ]
     },
     {
       "name": "XP Inc",
