@@ -18,10 +18,21 @@ void main() {
     () {
       // given
       when(() => dataSource.changeTheme(any()))
-          .thenAnswer((invocation) => Future.value());
+          .thenAnswer((_) => Future.value());
 
       // then
       expect(repository.changeTheme(true), completes);
     },
   );
+
+  test(
+      'SHOULD get right answer '
+      'WHEN isDarkThemeEnabled', () {
+    // given
+    when(() => dataSource.isDarkThemeEnabled())
+        .thenAnswer((_) => Future.value(true));
+
+    // then
+    expect(repository.isDarkThemeEnabled(), completion(true));
+  });
 }
