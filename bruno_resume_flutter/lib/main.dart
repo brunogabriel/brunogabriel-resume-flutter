@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
     return BlocBuilder<ChangeThemeCubit, bool>(
       builder: (context, state) {
         return MaterialApp(
-          title: 'Flutter Demo',
+          title: 'Bruno - Resume',
           theme: state.themeData,
           debugShowCheckedModeBanner: false,
           home: const SelectionArea(child: ResumePage()),
