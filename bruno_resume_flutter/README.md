@@ -1,16 +1,21 @@
-# bruno_resume_flutter
+# My Resume
 
-A new Flutter project.
+[![codecov](https://codecov.io/github/brunogabriel/brunogabriel-resume-flutter/graph/badge.svg?token=CKNB0ZVIPG)](https://codecov.io/github/brunogabriel/brunogabriel-resume-flutter)
 
-## Getting Started
+## Overview
+This repository contains my resume built using Flutter. It showcases my skills, experience, and projects.
 
-This project is a starting point for a Flutter application.
+## Stack
 
-A few resources to get you started if this is your first Flutter project:
+- **Google Fonts**: Custom fonts from Google's open-source library.
+- **get_it**: Service locator for managing dependencies.
+- **injectable**: Simplifies dependency injection with code generation.
+- **equatable**: Facilitates equality comparisons for Dart objects.
+- **url_launcher**: Opens URLs in the device's default web browser.
+- **json_annotation**: Serializes and deserializes Dart objects to/from JSON.
+- **font_awesome_flutter**: Access to Font Awesome icons in Flutter apps.
+- **shared_preferences**: Stores simple data persistently on the device.
+- **flutter_bloc**: State management library following the BLoC pattern.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## License
+This project is licensed under the [MIT License](LICENSE).
