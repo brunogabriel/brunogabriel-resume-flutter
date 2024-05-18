@@ -4,8 +4,7 @@ import 'package:bruno_resume_flutter/shared/theme/theme_constants.dart';
 import 'package:flutter/material.dart';
 
 class ExperiencesWidget extends StatelessWidget {
-  const ExperiencesWidget({Key? key, required this.experiences})
-      : super(key: key);
+  const ExperiencesWidget({super.key, required this.experiences});
 
   final List<Experience> experiences;
 
@@ -49,7 +48,6 @@ class ExperiencesWidget extends StatelessWidget {
                   )
                 ])
             .expand((element) => element)
-            .toList()
       ],
     );
   }
