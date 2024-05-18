@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class AboutWidget extends StatelessWidget {
   const AboutWidget({
-    Key? key,
+    super.key,
     required this.about,
-  }) : super(key: key);
+  });
 
   final About about;
 

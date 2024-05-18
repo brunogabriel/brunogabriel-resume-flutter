@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ResumeErrorWidget extends StatelessWidget {
-  const ResumeErrorWidget({Key? key}) : super(key: key);
+  const ResumeErrorWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

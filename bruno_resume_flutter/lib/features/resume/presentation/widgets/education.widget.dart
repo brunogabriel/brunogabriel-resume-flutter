@@ -5,9 +5,9 @@ import 'package:flutter/widgets.dart';
 
 class EducationWidget extends StatelessWidget {
   const EducationWidget({
-    Key? key,
+    super.key,
     required this.educations,
-  }) : super(key: key);
+  });
 
   final List<Education> educations;
 
@@ -37,7 +37,6 @@ class EducationWidget extends StatelessWidget {
                   )
                 ])
             .expand((element) => element)
-            .toList()
       ],
     );
   }

@@ -5,8 +5,7 @@ import 'package:bruno_resume_flutter/shared/theme/theme_constants.dart';
 import 'package:flutter/material.dart';
 
 class PublicationsWidget extends StatelessWidget {
-  const PublicationsWidget({Key? key, required this.publications})
-      : super(key: key);
+  const PublicationsWidget({super.key, required this.publications});
 
   final List<Publication> publications;
 
@@ -52,7 +51,6 @@ class PublicationsWidget extends StatelessWidget {
                   )
                 ])
             .expand((element) => element)
-            .toList()
       ],
     );
   }
