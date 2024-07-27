@@ -1,7 +1,8 @@
-import 'package:bruno_resume_flutter/features/change_theme/domain/change_theme_use_case.dart';
-import 'package:bruno_resume_flutter/features/change_theme/domain/get_theme_use_case.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
+
+import '../../domain/change_theme_use_case.dart';
+import '../../domain/get_theme_use_case.dart';
 
 @injectable
 class ChangeThemeCubit extends Cubit<bool> {

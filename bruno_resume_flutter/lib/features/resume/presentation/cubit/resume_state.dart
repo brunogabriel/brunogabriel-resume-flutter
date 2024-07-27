@@ -18,5 +18,5 @@ final class ResumeResultState extends ResumeState {
   final Resume result;
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [result];
 }

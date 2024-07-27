@@ -1,7 +1,7 @@
-import 'package:bruno_resume_flutter/features/resume/data/data_source/resume_data_source.dart';
 import 'package:injectable/injectable.dart';
 
 import '../domain/data/resume_repository.dart';
+import 'data_source/resume_data_source.dart';
 
 @Injectable(as: ResumeRepository)
 class ResumeRepositoryImpl implements ResumeRepository {
