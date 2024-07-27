@@ -1,6 +1,7 @@
-import 'package:bruno_resume_flutter/features/change_theme/domain/repository/change_theme_repository.dart';
-import 'package:bruno_resume_flutter/shared/architecture/use_case.dart';
 import 'package:injectable/injectable.dart';
+
+import '../../../shared/architecture/use_case.dart';
+import 'repository/change_theme_repository.dart';
 
 abstract class ChangeThemeUseCase extends FutureUseCase<void, bool> {
   @override

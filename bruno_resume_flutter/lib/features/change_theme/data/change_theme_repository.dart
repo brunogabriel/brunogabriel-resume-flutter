@@ -1,6 +1,7 @@
-import 'package:bruno_resume_flutter/features/change_theme/data/data_source/change_theme_data_source.dart';
-import 'package:bruno_resume_flutter/features/change_theme/domain/repository/change_theme_repository.dart';
 import 'package:injectable/injectable.dart';
+
+import '../domain/repository/change_theme_repository.dart';
+import 'data_source/change_theme_data_source.dart';
 
 @Injectable(as: ChangeThemeRepository)
 class ChangeThemeRepositoryImpl implements ChangeThemeRepository {

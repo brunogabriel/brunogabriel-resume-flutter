@@ -1,15 +1,14 @@
-import 'package:bruno_resume_flutter/features/change_theme/presentation/cubit/change_theme_cubit.dart';
-import 'package:bruno_resume_flutter/features/resume/presentation/cubit/resume_cubit.dart';
-import 'package:bruno_resume_flutter/features/resume/presentation/views/resume.error.widget.dart';
-import 'package:bruno_resume_flutter/features/resume/presentation/views/resume.loading.widget.dart';
-import 'package:bruno_resume_flutter/features/resume/presentation/views/resume.success.widget.dart';
 import 'package:bruno_resume_flutter/shared/extensions/string_extensions.dart';
-import 'package:bruno_resume_flutter/shared/theme/theme_constants.dart';
-import 'package:bruno_resume_flutter/shared/theme/widgets/fade_in_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get_it/get_it.dart';
+
+import '../../../../shared/theme/theme_constants.dart';
+import '../../../../shared/theme/widgets/fade_in_view.dart';
+import '../../../change_theme/presentation/cubit/change_theme_cubit.dart';
+import '../cubit/resume_cubit.dart';
+import '../views/resume.views.dart';
 
 class ResumePage extends StatelessWidget {
   const ResumePage({super.key});
